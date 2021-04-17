@@ -457,6 +457,10 @@ class AecDemoPanel
 					result = _left.operand % _right.operand;
 				}
 			}
+			else if ( op == '^' )
+			{
+					result = ( int )Math.pow( _left.operand, _right.operand );
+			}
 
 			if ( !err )
 			{
@@ -621,6 +625,7 @@ class AecDemoPanel
 	AecDemoButton			btnMul = null;
 	AecDemoButton			btnDiv = null;
 	AecDemoButton			btnMod = null;
+	AecDemoButton			btnPow = null;
 	AecDemoButton			btnParenR = null;
 	AecDemoButton			btnParenL = null;
 

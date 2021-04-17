@@ -375,29 +375,39 @@ class AecDemoUi
 		/*
 		   Operators, second row
 		 */
-		src.type = 'p';
-
 		gbc.gridy = 1;
+
+		src.prec = 100;
+		src.assoc = 'r';
 		gbc.gridx = 5;
 		gbc.insets = INSETSLB;
+		src.sym = '^';
+		pnlAD.btnPow = new AecDemoButton( src );
+		pnlAD.btnPow.addActionListener( pnlAD );
+		pnlAD.pnlInput.add( pnlAD.btnPow, gbc );
+
+		src.type = 'p';
+
+		gbc.gridx = 6;
+		gbc.insets = INSETSB;
 		src.sym = '(';
 		pnlAD.btnParenL = new AecDemoButton( src );
 		pnlAD.btnParenL.addActionListener( pnlAD );
 		pnlAD.pnlInput.add( pnlAD.btnParenL, gbc );
 
-		gbc.gridx = 6;
+		gbc.gridx = 7;
 		gbc.insets = INSETSB;
 		src.sym = ')';
 		pnlAD.btnParenR = new AecDemoButton( src );
 		pnlAD.btnParenR.addActionListener( pnlAD );
 		pnlAD.pnlInput.add( pnlAD.btnParenR, gbc );
 
-		gbc.gridx = 7;
+		gbc.gridx = 8;
 		pnlAD.jbBkSp = new JButton( "b" );
 		pnlAD.jbBkSp.addActionListener( pnlAD );
 		pnlAD.pnlInput.add( pnlAD.jbBkSp, gbc );
 
-		gbc.gridx = 8;
+		gbc.gridx = 9;
 		pnlAD.jbClr = new JButton( "C" );
 		pnlAD.jbClr.addActionListener( pnlAD );
 		pnlAD.pnlInput.add( pnlAD.jbClr, gbc );
